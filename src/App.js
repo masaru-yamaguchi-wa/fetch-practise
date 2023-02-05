@@ -10,7 +10,7 @@ function App() {
 
   const posttest = () => {
     const postdata = { data: "これだけに上書きできないか" }
-    const option = { method: "POST", headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(postdata) }
+    const option = { method: "POST", headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }, body: JSON.stringify(postdata) }
     fetch("data.json", option)
       .then(res => res.text())
       .then(text => console.log(text))
